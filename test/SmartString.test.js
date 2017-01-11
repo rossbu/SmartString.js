@@ -1,12 +1,12 @@
 (function() {
     'use strict';
 
-    var S = null;
+    var SS = null;
 
     if (typeof module !== 'undefined' && typeof module.exports !== 'undefined')
-        S = require('../lib/string');
+        SS = require('../lib/SmartString');
     else {
-        S = window.S;
+        SS = window.SS;
     }
 
     function T(v) {
@@ -23,15 +23,16 @@
 
     function EQ(v1, v2) {
         if (typeof require != 'undefined' && typeof process != 'undefined') //node
-            require('assert').equal(v1, v2)
+            require('assert').equal(v1, v2);
         else
-            T(v1 === v2)
+            T(v1 === v2);
     }
 
     function ARY_EQ(a1, a2) {
         EQ(a1.length, a2.length)
-        for (var i = 0; i < a1.length; ++i)
-            EQ(a1[i], a2[i])
+        for (var i = 0; i < a1.length; ++i) {
+            EQ(a1[i], a2[i]);
+        }
     }
 
     /*
@@ -45,13 +46,13 @@
 
         describe('- between(left, right)', function() {
             it('should extract string between `left` and `right`', function() {
-                EQ(S('<a>foo</a>').between('<a>', '</a>').s, 'foo')
-                EQ(S('<a>foo</a></a>').between('<a>', '</a>').s, 'foo')
-                EQ(S('<a><a>foo</a></a>').between('<a>', '</a>').s, '<a>foo')
-                EQ(S('<a>foo').between('<a>', '</a>').s, '')
-                EQ(S('Some strings } are very {weird}, dont you think?').between('{', '}').s, 'weird');
-                EQ(S('This is a test string').between('test').s, ' string');
-                EQ(S('This is a test string').between('', 'test').s, 'This is a ');
+                EQ(SS('<a>foo</a>').between('<a>', '</a>').s, 'foo')
+                EQ(SS('<a>foo</a></a>').between('<a>', '</a>').s, 'foo')
+                EQ(SS('<a><a>foo</a></a>').between('<a>', '</a>').s, '<a>foo')
+                EQ(SS('<a>foo').between('<a>', '</a>').s, '')
+                EQ(SS('Some strings } are very {weird}, dont you think?').between('{', '}').s, 'weird');
+                EQ(SS('This is a test string').between('test').s, ' string');
+                EQ(SS('This is a test string').between('', 'test').s, 'This is a ');
             });
         });
     });

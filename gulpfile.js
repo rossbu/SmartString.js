@@ -3,13 +3,13 @@ var gulp = require('gulp'),
     rimraf = require('gulp-rimraf'),
     rename = require('gulp-rename'),
     browserify = require('gulp-browserify'),
-    SRC = './lib/string.js',
-    TEST_SRC = './test/string.test.js',
     mochify = require('mochify'),
-    DEST = 'dist',
     mocha = require('gulp-mocha'),
-    SRC_COMPILED = 'string.js',
-    MIN_FILE = 'string.min.js';
+    SRC = './lib/SmartString.js',
+    TEST_SRC = './test/SmartString.test.js',
+    DEST = 'dist',
+    SRC_COMPILED = 'SmartString.js',
+    MIN_FILE = 'SmartString.min.js';
 
 gulp.task('browserify', function() {
     return gulp.src(SRC)
@@ -22,8 +22,10 @@ gulp.task('browserify', function() {
 
 gulp.task('browserTest', function(done) {
     return mochify({ wd: true })
-        .on('error', function(err) { if (err) done(err);
-            else done(); })
+        .on('error', function(err) {
+            if (err) done(err);
+            else done();
+        })
         .bundle();
 });
 

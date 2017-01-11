@@ -2,3 +2,4 @@ node_modules/
 converage/
 dist/
 .vscode/
+*.log

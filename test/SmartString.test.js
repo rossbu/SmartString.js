@@ -51,8 +51,22 @@
                 EQ(SS('<a><a>foo</a></a>').between('<a>', '</a>').s, '<a>foo')
                 EQ(SS('<a>foo').between('<a>', '</a>').s, '')
                 EQ(SS('Some strings } are very {weird}, dont you think?').between('{', '}').s, 'weird');
-                EQ(SS('This is a test string').between('test').s, ' string');
                 EQ(SS('This is a test string').between('', 'test').s, 'This is a ');
+                EQ(SS('This is a test1 string').between('test1').s, ' string');
+            });
+        });
+
+        describe('- charat(index)', function() {
+            it('should return the right position/index of the string', function() {
+                EQ('i', SS('hi').charAt(1));
+            });
+        });
+
+        describe(' - toISOString', function() {
+            it('should return ISO string for a valid date string', function() {
+                var dateStr = '18 July 2016 23:58:58 UTC';
+                var iso = '2016-07-18T23:58:58.000Z';
+                EQ(iso, SS(dateStr).toISOString());
             });
         });
     });

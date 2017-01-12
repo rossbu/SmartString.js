@@ -1,10 +1,6 @@
 # SmartString.js
 Enhanced String Javascript Utils, which is mainly designed for personal user and learning. 
 
-# [Javascript framework]
- * [String.js](http://stringjs.com/)
-
-
 # Typescript:
 * https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/string/string-tests.ts
 * https://github.com/DefinitelyTyped/DefinitelyTyped/tree/types-2.0/string
@@ -25,3 +21,6 @@ Enhanced String Javascript Utils, which is mainly designed for personal user and
 # Test framework
  * npm install mocha chai --save-dev
  * Doc: [unit-test-javascript-mocha-chai](https://www.sitepoint.com/unit-test-javascript-mocha-chai/)
+
+# [Javascript framework]
+ * [String.js](http://stringjs.com/)

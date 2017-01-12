@@ -9,7 +9,7 @@
     "keywords": [
         "javascript",
         "js",
-        "Stringjs",
+        "StringUtils",
         "String",
         "SS"
     ],
@@ -37,6 +37,7 @@
         "test": "gulp test",
         "gtest": "gulp test",
         "mdebug": "mocha --debug-brk",
+        "mocha": "mocha",
         "istanbul": "node_modules/.bin/istanbul cover node_modules/.bin/_mocha test/string.test.js"
     },
     "bugs": {

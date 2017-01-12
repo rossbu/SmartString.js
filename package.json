@@ -36,7 +36,7 @@
     "scripts": {
         "test": "gulp test",
         "gtest": "gulp test",
-        "mtest": "mocha --debug-brk",
+        "mdebug": "mocha --debug-brk",
         "istanbul": "node_modules/.bin/istanbul cover node_modules/.bin/_mocha test/string.test.js"
     },
     "bugs": {

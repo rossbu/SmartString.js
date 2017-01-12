@@ -56,7 +56,7 @@
             });
         });
 
-        describe('- charat(index)', function() {
+        describe('- charAt(index)', function() {
             it('should return the right position/index of the string', function() {
                 EQ('i', SS('hi').charAt(1));
             });

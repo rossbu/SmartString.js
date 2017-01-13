@@ -3,3 +3,4 @@ converage/
 dist/
 .vscode/
 *.log
+bower_components/

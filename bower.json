@@ -1,0 +1,24 @@
+{
+  "name": "smartstring.js",
+  "description": "Java script Utils for general purpose",
+  "main": "lib/SmartString",
+  "authors": [
+    "rossbu"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "javascript",
+    "js",
+    "StringUtils",
+    "String",
+    "SS"
+  ],
+  "homepage": "https://github.com/rossbu/SmartString.js",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

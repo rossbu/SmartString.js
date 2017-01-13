@@ -1,5 +1,6 @@
 (function() {
     'use strict';
+     const assert  = require('assert');
 
     var SS = null;
 
@@ -67,6 +68,7 @@
                 var dateStr = '18 July 2016 23:58:58 UTC';
                 var iso = '2016-07-18T23:58:58.000Z';
                 EQ(iso, SS(dateStr).toISOString());
+                assert.equal(iso,SS(dateStr).toISOString());
             });
         });
     });

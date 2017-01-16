@@ -20,7 +20,12 @@ Enhanced String Javascript Utils, which is mainly designed for personal user and
 
 # Test framework
  * npm install mocha chai --save-dev
+ * npm i -D mocha chai
  * Doc: [unit-test-javascript-mocha-chai](https://www.sitepoint.com/unit-test-javascript-mocha-chai/)
+
+# Vs code plugins
+* version lens
+* ES 6 Mocha Snippets
 
 # [Javascript framework]
  *  Mainly reference from [String.js](http://stringjs.com/), which should be used instead of this lib. 

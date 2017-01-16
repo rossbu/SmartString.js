@@ -26,6 +26,7 @@ Enhanced String Javascript Utils, which is mainly designed for personal user and
 # Vs code plugins
 * version lens
 * ES 6 Mocha Snippets
+* package watcher
 
 # [Javascript framework]
  *  Mainly reference from [String.js](http://stringjs.com/), which should be used instead of this lib. 

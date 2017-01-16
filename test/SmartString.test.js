@@ -1,6 +1,7 @@
 (function() {
     'use strict';
      const assert  = require('assert');
+     var expect =require('chai').expect;
 
     var SS = null;
 
@@ -71,5 +72,13 @@
                 assert.equal(iso,SS(dateStr).toISOString());
             });
         });
+
+        describe(' - Mocha/Chai testing', () => {
+            it('should be a dumb testing ', () => {
+                expect(true).to.be.true;
+                expect(true).to.been.true;
+            });
+        });
+
     });
 }).call(this);

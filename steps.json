@@ -48,6 +48,10 @@
             "command4": "node_modules/.bin/istanbul test ./node_modules/mocha/bin/_mocha -- --recursive exports -R spec test/*.test.js",
             "issue": "https://github.com/jmcriffey/babel-istanbul/issues/70",
             "check-coverage": "istanbul check-coverage --statements 50 --branches 50 --functions 30 --lines 50"
+        }],
+        "codecov": [{
+            "def": "",
+            "command": "npm i -D codecov.io"
         }]
     }
 ]

@@ -17,6 +17,7 @@
     "dependencies": {},
     "devDependencies": {
         "chai": "3.5.0",
+        "codecov.io": "0.1.6",
         "commitizen": "2.9.5",
         "cz-conventional-changelog": "1.2.0",
         "gulp": "3.9.1",
@@ -40,18 +41,22 @@
     "czConfig": {
         "path": "node_modules/cz-conventional-changelog"
     },
-
+    "config": {
+        "commitizen": {
+            "path": "./node_modules/cz-conventional-changelog"
+        }
+    },
     "main": "lib/SmartString",
     "scripts": {
         "commit": "git-cz",
         "test": "gulp test",
         "mocha": "mocha",
-        "mochaw": "mocha -w",
+        "mochaw": "./node_modules/.bin/mocha  -w --opts ./mocha.opts './test/**/*.spec.js'",
         "istanbul": "node_modules/.bin/istanbul  cover --report html ./node_modules/mocha/bin/_mocha -- --recursive -R spec test/*.test.js",
         "semantic-release": "semantic-release pre && npm publish && semantic-release post",
         "precommit": "npm run test && npm run check-coverage",
         "prepush": "npm run test",
-        "check-coverage": "node_modules/.bin/istanbul check-coverage --recursive --statements 50 --branches 45 --functions 30 --lines 30"
+        "check-coverage": "node_modules/.bin/istanbul check-coverage  --root coverage --statements 50 --branches 45 --functions 30 --lines 30"
     },
     "bugs": {
         "url": "https://github.com/rossbu/SmartString.js/issues"

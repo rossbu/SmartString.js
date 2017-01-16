@@ -9,8 +9,8 @@ node_js:
 before_script:
   - npm prune
 script:
-  - npm --version
   - npm run test
+  - npm run check-coverage
 after_success:
   - npm run semantic-release
 branches:

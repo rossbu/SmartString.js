@@ -64,7 +64,27 @@
             });
         });
 
-        describe(' - toISOString', function() {
+        describe('- decodeHTMLEntities()', function() {
+            it('should decode HTML entities into their proper string representation', function() {
+                EQ(SS('Tianshi &amp; Bu').decodeHTMLEntities().s, 'Tianshi & Bu');
+                EQ(SS('0 &lt; 1').decodeHTMLEntities().s, '0 < 1');
+                EQ(SS('http:&#47;&#47;').decodeHTMLEntities().s, 'http://')
+            });
+        });
+        describe('- valueOf()', function() {
+            it('should return the primitive value of the string, wraps native valueOf()', function() {
+                T(SS('hi').valueOf() === 'hi')
+            });
+        });
+
+        describe('- toString()', function() {
+            it('should return the native string', function() {
+                T(SS('hi').toString() === 'hi');
+                T(SS('hi').toString() === SS('hi').s);
+            });
+        });
+
+        describe('- toISOString', function() {
             it('should return ISO string for a valid date string', function() {
                 var dateStr = '18 July 2016 23:58:58 UTC';
                 var iso = '2016-07-18T23:58:58.000Z';
@@ -73,7 +93,7 @@
             });
         });
 
-        describe(' - Mocha/Chai testing', () => {
+        describe('- Mocha/Chai testing', () => {
             it('should be a dumb testing ', () => {
                 expect(true).to.be.true;
                 expect(true).to.been.true;

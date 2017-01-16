@@ -38,6 +38,16 @@
         }],
         "husky (substitute)": [{
             "npm": "npm i -D husky"
+        }],
+        "istanbul": [{
+            "def": "Istanbul is a code coverage tool for JavaScript.",
+            "comamnd0": "npm install -g istanbul",
+            "command1": "istanbul cover --report html nodemodules/.bin/mocha -- -R spec",
+            "command2": "istanbul cover node_modules/.bin/_mocha -- -- -u exports -R spec test/**/*",
+            "command3": "node_modules/.bin/istanbul cover node_modules/.bin/_mocha test/SmartString.test.js",
+            "command4": "node_modules/.bin/istanbul test ./node_modules/mocha/bin/_mocha -- --recursive exports -R spec test/*.test.js",
+            "issue": "https://github.com/jmcriffey/babel-istanbul/issues/70",
+            "check-coverage": "istanbul check-coverage --statements 50 --branches 50 --functions 30 --lines 50"
         }]
     }
 ]

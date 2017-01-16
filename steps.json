@@ -31,10 +31,13 @@
         }]
     },
     {
-        "ghooks": [{
+        "ghooks ( deprecated )": [{
             "ghooks": " git hooks",
             "npm": "npm i -D ghooks",
             "config": " pre-commit , npm run test"
+        }],
+        "husky (substitute)": [{
+            "npm": "npm i -D husky"
         }]
     }
 ]

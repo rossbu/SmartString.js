@@ -6,19 +6,27 @@
                 "step2": "git push --tags",
                 "step3": "npm publish",
                 "step4": "npm info smartstring.js"
-
             }
         ]
     },
     {
-        "publish a beta version":[
+        "publish a beta version": [
             {
-                "step1":"modify version to 1.2.0-beta.0",
-                "step2":"git tag 1.2.0-beta.0",
-                "step3":"git push",
-                "step4":"git push --tags",
-                "step5":"npm publish --tag beta",
-                "step6":"npm info smartstring.js"
+                "step1": "modify version to 1.2.0-beta.0",
+                "step2": "git tag 1.2.0-beta.0",
+                "step3": "git push",
+                "step4": "git push --tags",
+                "step5": "npm publish --tag beta",
+                "step6": "npm info smartstring.js"
+            }
+        ]
+    },
+    {
+        "semantic release": [
+            {
+                "cli": "npm install -g semantic-release-cli",
+                "run": "semantic-release-cli setup",
+                "": ""
             }
         ]
     }

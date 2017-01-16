@@ -1,0 +1,18 @@
+[
+    {
+        "npm release": [
+            {
+                "step1": "git tag 1.0.0",
+                "step2": "git push --tags"
+            }
+        ]
+    },
+    {
+        "npm update":[
+            {
+                "step1":"",
+                "step2":""
+            }
+        ]
+    }
+]

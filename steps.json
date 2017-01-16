@@ -26,7 +26,8 @@
             {
                 "cli": "npm install -g semantic-release-cli",
                 "run": "semantic-release-cli setup",
-                "": ""
+                "commitizen": "npm install -g commitizen cz-conventional-changelog",
+                "warning":"This repository's package.json is using czConfig. czConfig will be deprecated in Commitizen 3."
             }
         ]
     }

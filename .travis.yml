@@ -11,6 +11,7 @@ node_js:
 before_script:
   - npm prune
 script:
+  - npm --version
   - npm run test
 after_success:
   - npm run semantic-release

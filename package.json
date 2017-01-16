@@ -51,7 +51,7 @@
         "semantic-release": "semantic-release pre && npm publish && semantic-release post",
         "precommit": "npm run test && npm run check-coverage",
         "prepush": "npm run test",
-        "check-coverage": "node_modules/.bin/istanbul check-coverage --statements 50 --branches 45 --functions 30 --lines 30"
+        "check-coverage": "node_modules/.bin/istanbul check-coverage --recursive --statements 50 --branches 45 --functions 30 --lines 30"
     },
     "bugs": {
         "url": "https://github.com/rossbu/SmartString.js/issues"

@@ -3,7 +3,9 @@
         "npm release": [
             {
                 "step1": "git tag 1.0.0",
-                "step2": "git push --tags"
+                "step2": "git push --tags",
+                "step3": "npm publish"
+
             }
         ]
     },

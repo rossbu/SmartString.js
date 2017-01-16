@@ -83,3 +83,6 @@ gulp.task('browserTest', function(done) {
         })
         .bundle();
 });
+
+// The default task (called when you run `gulp` from cli)
+gulp.task('default', ['clean', 'build']);

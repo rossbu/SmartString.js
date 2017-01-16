@@ -1,48 +1,51 @@
 {
-    "name": "smartstring.js",
-    "version": "1.2.0-beta.0",
-    "description": "Java script Utils for general purpose",
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/rossbu/SmartString.js.git"
-    },
-    "keywords": [
-        "javascript",
-        "js",
-        "StringUtils",
-        "String",
-        "SS"
-    ],
-    "author": "rossbu",
-    "license": "ISC",
-    "dependencies": {},
-    "devDependencies": {
-        "gulp": "3.9.1",
-        "gulp-browserify": "0.5.1",
-        "gulp-buffer": "0.0.2",
-        "gulp-mocha": "2.0.0",
-        "gulp-rename": "1.2.0",
-        "gulp-rimraf": "^0.1.1",
-        "gulp-sourcemaps": "2.3.1",
-        "gulp-tap": "0.1.3",
-        "gulp-uglify": "1.1.0",
-        "istanbul": "*",
-        "mocha": "*",
-        "mochify": "^2.9.0",
-        "reactify": "1.1.1",
-        "uglify-js": "1.3.x"
-    },
-    "main": "lib/SmartString",
-    "scripts": {
-        "test": "gulp test",
-        "gtest": "gulp test",
-        "mdebug": "mocha --debug-brk",
-        "mocha": "mocha",
-        "istanbul": "node_modules/.bin/istanbul cover node_modules/.bin/_mocha test/string.test.js",
-        "postinstall": "node_modules/.bin/bower install"
-    },
-    "bugs": {
-        "url": "https://github.com/rossbu/SmartString.js/issues"
-    },
-    "homepage": "https://github.com/rossbu/SmartString.js#readme"
+  "name": "smartstring.js",
+  "version": "1.2.0-beta.0",
+  "description": "Java script Utils for general purpose",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rossbu/SmartString.js.git"
+  },
+  "keywords": [
+    "javascript",
+    "js",
+    "StringUtils",
+    "String",
+    "SS"
+  ],
+  "author": "rossbu",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "chai": "3.5.0",
+    "gulp": "3.9.1",
+    "gulp-browserify": "0.5.1",
+    "gulp-buffer": "0.0.2",
+    "gulp-mocha": "2.0.0",
+    "gulp-rename": "1.2.0",
+    "gulp-rimraf": "^0.1.1",
+    "gulp-sourcemaps": "2.3.1",
+    "gulp-tap": "0.1.3",
+    "gulp-uglify": "1.1.0",
+    "i": "0.3.5",
+    "istanbul": "*",
+    "mocha": "*",
+    "mochify": "^2.9.0",
+    "npm": "4.1.1",
+    "reactify": "1.1.1",
+    "uglify-js": "1.3.x"
+  },
+  "main": "lib/SmartString",
+  "scripts": {
+    "test": "gulp test",
+    "gtest": "gulp test",
+    "mdebug": "mocha --debug-brk",
+    "mocha": "mocha",
+    "istanbul": "node_modules/.bin/istanbul cover node_modules/.bin/_mocha test/string.test.js",
+    "postinstall": "node_modules/.bin/bower install"
+  },
+  "bugs": {
+    "url": "https://github.com/rossbu/SmartString.js/issues"
+  },
+  "homepage": "https://github.com/rossbu/SmartString.js#readme"
 }

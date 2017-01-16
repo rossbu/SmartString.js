@@ -76,7 +76,7 @@
         describe(' - Mocha/Chai testing', () => {
             it('should be a dumb testing ', () => {
                 expect(true).to.be.true;
-                expect(true).to.been.false;
+                expect(true).to.been.true;
             });
         });
 

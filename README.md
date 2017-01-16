@@ -23,4 +23,4 @@ Enhanced String Javascript Utils, which is mainly designed for personal user and
  * Doc: [unit-test-javascript-mocha-chai](https://www.sitepoint.com/unit-test-javascript-mocha-chai/)
 
 # [Javascript framework]
- * [String.js](http://stringjs.com/)
+ *  Mainly reference from [String.js](http://stringjs.com/), which should be used instead of this lib. 

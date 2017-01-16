@@ -26,7 +26,8 @@
             "script": "add commit: git-cz ( which is in the node_modules/.bin/ folder ) in script block in package.json ",
             "git": "git add .",
             "npm": "npm run commit ( instead of git commit) -- do more than git commit -- which calls git-cz defined in package.json",
-            "warning": "!!! This repository's package.json is using czConfig. czConfig will be deprecated in Commitizen 3. !!! "
+            "warning": "!!! This repository's package.json is using czConfig. czConfig will be deprecated in Commitizen 3. !!! ",
+            "push changes": "git push -- after pushing to github, travis will auto detect and run the build for any changes"
         }]
     }
 ]

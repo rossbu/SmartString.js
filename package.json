@@ -1,6 +1,5 @@
 {
     "name": "smartstring.js",
-    "version": "2.0.0-development",
     "description": "Java script Utils for general purpose",
     "repository": {
         "type": "git",

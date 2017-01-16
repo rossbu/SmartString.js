@@ -1,38 +1,32 @@
-[
-    {
-        "npm publish": [
-            {
-                "step1": "git tag 1.0.0",
-                "step2": "git push --tags",
-                "step3": "npm publish",
-                "step4": "npm info smartstring.js"
-            }
-        ]
+[{
+        "npm publish": [{
+            "step1": "git tag 1.0.0",
+            "step2": "git push --tags",
+            "step3": "npm publish",
+            "step4": "npm info smartstring.js"
+        }]
     },
     {
-        "publish a beta version": [
-            {
-                "step1": "modify version to 1.2.0-beta.0",
-                "step2": "git tag 1.2.0-beta.0",
-                "step3": "git push",
-                "step4": "git push --tags",
-                "step5": "npm publish --tag beta",
-                "step6": "npm info smartstring.js"
-            }
-        ]
+        "publish a beta version": [{
+            "step1": "modify version to 1.2.0-beta.0",
+            "step2": "git tag 1.2.0-beta.0",
+            "step3": "git push",
+            "step4": "git push --tags",
+            "step5": "npm publish --tag beta",
+            "step6": "npm info smartstring.js"
+        }]
     },
     {
-        "semantic release": [
-            {
-                "cli": "npm install -g semantic-release-cli",
-                "run": "semantic-release-cli setup",
-                "commitizen": "npm install -g commitizen cz-conventional-changelog in package.json",
-                "czConfig":"path : node_modules/cz-conventional-changelog",
-                "script" :"commit: git-cz ( which is in the node_modules/.bin/ folder",
-                "git":"git add .",
-                "npm": "npm run commit ( instead of git commit)",
-                "warning":"This repository's package.json is using czConfig. czConfig will be deprecated in Commitizen 3."
-            }
-        ]
+        "semantic release": [{
+            "cli": "npm install -g semantic-release-cli",
+            "run": "semantic-release-cli setup",
+            "link": "go to travis website to link github with travis",
+            "commitizen": "npm install -g commitizen cz-conventional-changelog in package.json",
+            "czConfig": "add czConfig with path : node_modules/cz-conventional-changelog in package.json",
+            "script": "add commit: git-cz ( which is in the node_modules/.bin/ folder ) in script block in package.json ",
+            "git": "git add .",
+            "npm": "npm run commit ( instead of git commit) -- do more than git commit -- which calls git-cz defined in package.json",
+            "warning": "!!! This repository's package.json is using czConfig. czConfig will be deprecated in Commitizen 3. !!! "
+        }]
     }
 ]

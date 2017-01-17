@@ -1,5 +1,11 @@
+![travis build](https://img.shields.io/travis/rossbu/SmartString.js.svg?style=flat-square)
+![Codecov coverage](https://img.shields.io/codecov/c/github/rossbu/SmartString.js.svg?style=flat-squar)
+![NPM download](https://img.shields.io/npm/dm/smartstring.js.svg?style=flat-squar)
+![Version](https://img.shields.io/npm/v/smartstring.js.svg?style=flat-squar)
+![License](https://img.shields.io/npm/l/smartstring.js.svg)
+
 # SmartString.js
-Enhanced String Javascript Utils, which is mainly designed for personal user and learning. 
+Enhanced Javascript String Utils, which is mainly designed for personal user and learning. 
 
 # Typescript:
 * https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/string/string-tests.ts
@@ -29,4 +35,4 @@ Enhanced String Javascript Utils, which is mainly designed for personal user and
 * package watcher
 
 # [Javascript framework]
- *  Mainly reference from [String.js](http://stringjs.com/), which should be used instead of this lib. 
+ *  Mainly referenced from [String.js](http://stringjs.com/), which should be used instead of this lib. 

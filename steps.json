@@ -52,6 +52,15 @@
         "codecov.io": [{
             "to get a badge": "send your coverage report to 3rd part service ( codecov.io ).",
             "command": "npm i -D codecov.io"
+        }],
+
+        "Badge shields.io": [{
+            "shields.io": "open shields.io and go to travis-ci",
+            "image syntax": "[![Travis](https://img.shields.io/travis/rust-lang/rust.svg)]()"
         }]
+    },
+    {
+        "transpiler"
+
     }
 ]

@@ -10,6 +10,8 @@ before_script:
   - npm prune
 script:
   - npm run test
+  - npm run gulptest
+  - npm run istanbul
   - npm run check-coverage
 after_success:
   - npm run semantic-release

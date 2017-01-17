@@ -49,9 +49,8 @@
     "main": "lib/SmartString",
     "scripts": {
         "commit": "git-cz",
-        "test": "mocha test/SmartString.test.js",
-        "gtest": "gulp test",
-        "mochaw": "./node_modules/.bin/mocha  -w --opts ./mocha.opts './test/**/*.spec.js'",
+        "test": "_mocha test/*.test.js",
+        "gulptest": "gulp test",
         "istanbul": "istanbul  cover --report html ./node_modules/mocha/bin/_mocha -- --recursive -R spec test/*.test.js",
         "semantic-release": "semantic-release pre && npm publish && semantic-release post",
         "precommit": "npm run test && npm run check-coverage",

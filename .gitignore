@@ -10,3 +10,4 @@ CVS
 .hg
 *.tgz
 *.zip
+.nyc_output

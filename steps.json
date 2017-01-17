@@ -73,8 +73,20 @@
         }],
         "ES6 Test Support": [{
             "babel": "npm i -D babel-cli",
-            "add script": "build: babel --out-dir dist lib --ignore *.test.js"
+            "add script": "build: babel --out-dir dist lib --ignore *.test.js",
+            "babel-register": "npm i -D babel-register",
+            "test": "_mocha test/*.test.js --compilers js:babel-register",
+            "nyc": "npm i -D nyc",
+            "check-coverage": "nyc check-coverage --statements 35 --branches 18 --functions 13 --lines 12"
         }]
-
+    },
+    {
+        "Limit builds": [{
+            "branch": "update travis to only build master",
+            "add script": "build: babel --out-dir dist lib --ignore *.test.js"
+        }],
+        "rimraf": [{
+            "npm": "npm i -D rimraf"
+        }]
     }
 ]

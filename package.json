@@ -51,10 +51,11 @@
         "commit": "git-cz",
         "test": "_mocha test/*.test.js",
         "gulptest": "gulp test",
-        "istanbul": "istanbul  cover --report html ./node_modules/mocha/bin/_mocha -- --recursive -R spec test/*.test.js",
+        "istanbul": "istanbul cover ./node_modules/mocha/bin/_mocha -- --recursive -R spec test/*.test.js",
         "semantic-release": "semantic-release pre && npm publish && semantic-release post",
         "precommit": "npm run test && npm run check-coverage",
-        "check-coverage": "istanbul check-coverage --statements 50 --branches 45 --functions 30 --lines 30"
+        "check-coverage": "istanbul check-coverage --statements 50 --branches 45 --functions 30 --lines 30",
+        "report-coverage": "cat ./coverage/lcov.info | codecov"
     },
     "bugs": {
         "url": "https://github.com/rossbu/SmartString.js/issues"

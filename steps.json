@@ -49,8 +49,8 @@
             "issue": "https://github.com/jmcriffey/babel-istanbul/issues/70",
             "check-coverage": "istanbul check-coverage --statements 50 --branches 50 --functions 30 --lines 50"
         }],
-        "codecov": [{
-            "def": "",
+        "codecov.io": [{
+            "to get a badge": "send your coverage report to 3rd part service ( codecov.io ).",
             "command": "npm i -D codecov.io"
         }]
     }

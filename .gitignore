@@ -8,3 +8,5 @@ bower_components/
 .svn
 CVS
 .hg
+*.tgz
+*.zip

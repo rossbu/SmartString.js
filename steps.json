@@ -60,7 +60,21 @@
         }]
     },
     {
-        "transpiler"
+        "ES6 Support": [{
+            "babel": "npm i -D babel-cli",
+            "add script": "build: babel --out-dir dist lib --ignore *.test.js"
+        }],
+        "rimraf": [{
+            "npm": "npm i -D rimraf"
+        }],
+        "packing": [{
+            "npm pack run with version defined in package.json": "npm pack",
+            "files": "README and dist"
+        }],
+        "ES6 Test Support": [{
+            "babel": "npm i -D babel-cli",
+            "add script": "build: babel --out-dir dist lib --ignore *.test.js"
+        }]
 
     }
 ]

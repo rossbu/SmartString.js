@@ -18,7 +18,7 @@
         "dist"
     ],
     "author": "rossbu",
-    "license": "ISC",
+    "license": "MIT",
     "main": "lib/SmartString",
     "dependencies": {},
     "devDependencies": {

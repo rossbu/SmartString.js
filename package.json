@@ -20,9 +20,14 @@
     "author": "rossbu",
     "license": "MIT",
     "main": "lib/SmartString",
-    "dependencies": {},
+    "dependencies": {
+        "lodash": "4.17.4"
+    },
     "devDependencies": {
         "babel-cli": "6.18.0",
+        "babel-core": "6.21.0",
+        "babel-loader": "6.2.10",
+        "babel-preset-es2015": "6.18.0",
         "babel-register": "6.18.0",
         "chai": "3.5.0",
         "codecov.io": "0.1.6",
@@ -40,14 +45,17 @@
         "husky": "0.12.0",
         "i": "0.3.5",
         "istanbul": "*",
+        "json-loader": "0.5.4",
         "mocha": "*",
         "mochify": "^2.9.0",
+        "npm-run-all": "4.0.1",
         "nyc": "10.0.0",
         "reactify": "1.1.1",
         "rimraf": "2.5.4",
         "semantic-release": "^6.3.2",
         "tap": "9.0.3",
-        "uglify-js": "1.3.x"
+        "uglify-js": "1.3.x",
+        "webpack": "1.14.0"
     },
     "czConfig": {
         "path": "node_modules/cz-conventional-changelog"
@@ -69,7 +77,10 @@
         "precommit": "npm run test && npm run check-coverage",
         "commit": "git-cz",
         "prebuild": "rimraf dist",
-        "build": "babel --copy-files --out-dir dist lib --ignore *.test.js"
+        "build": "npm-run-all --parallel build:*",
+        "build:main": "babel --copy-files --out-dir dist lib --ignore *.test.js",
+        "build:umd": "webpack --output-filename SmartString.umd.js",
+        "build:umd:min": "webpack --output-filename SmartString.umd.min.js -p"
     },
     "bugs": {
         "url": "https://github.com/rossbu/SmartString.js/issues"

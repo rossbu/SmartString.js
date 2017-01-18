@@ -1,134 +1,109 @@
-[
-    {
-        "npm publish": [
-            {
-                "step1": "git tag 1.0.0",
-                "step2": "git push --tags",
-                "step3": "npm publish",
-                "step4": "npm info smartstring.js"
-            }
-        ]
+[{
+        "npm publish": [{
+            "step1": "git tag 1.0.0",
+            "step2": "git push --tags",
+            "step3": "npm publish",
+            "step4": "npm info smartstring.js"
+        }]
     },
     {
-        "publish a beta version": [
-            {
-                "step1": "modify version to 1.2.0-beta.0",
-                "step2": "git tag 1.2.0-beta.0",
-                "step3": "git push",
-                "step4": "git push --tags",
-                "step5": "npm publish --tag beta",
-                "step6": "npm info smartstring.js"
-            }
-        ]
+        "publish a beta version": [{
+            "step1": "modify version to 1.2.0-beta.0",
+            "step2": "git tag 1.2.0-beta.0",
+            "step3": "git push",
+            "step4": "git push --tags",
+            "step5": "npm publish --tag beta",
+            "step6": "npm info smartstring.js"
+        }]
     },
     {
-        "semantic release": [
-            {
-                "cli": "npm install -g semantic-release-cli",
-                "run": "semantic-release-cli setup",
-                "link": "go to travis website to link github with travis",
-                "commitizen": "npm install -g commitizen cz-conventional-changelog in package.json",
-                "czConfig": "add czConfig with path : node_modules/cz-conventional-changelog in package.json",
-                "script": "add commit: git-cz ( which is in the node_modules/.bin/ folder ) in script block in package.json ",
-                "git": "git add .",
-                "npm": "npm run commit ( instead of git commit) -- do more than git commit -- which calls git-cz defined in package.json",
-                "warning": "!!! This repository's package.json is using czConfig. czConfig will be deprecated in Commitizen 3. !!! ",
-                "push changes": "git push -- after pushing to github, travis will auto detect and run the build for any changes"
-            }
-        ]
+        "semantic release": [{
+            "cli": "npm install -g semantic-release-cli",
+            "run": "semantic-release-cli setup",
+            "link": "go to travis website to link github with travis",
+            "commitizen": "npm install -g commitizen cz-conventional-changelog in package.json",
+            "czConfig": "add czConfig with path : node_modules/cz-conventional-changelog in package.json",
+            "script": "add commit: git-cz ( which is in the node_modules/.bin/ folder ) in script block in package.json ",
+            "git": "git add .",
+            "npm": "npm run commit ( instead of git commit) -- do more than git commit -- which calls git-cz defined in package.json",
+            "warning": "!!! This repository's package.json is using czConfig. czConfig will be deprecated in Commitizen 3. !!! ",
+            "push changes": "git push -- after pushing to github, travis will auto detect and run the build for any changes"
+        }]
     },
     {
-        "ghooks ( deprecated )": [
-            {
-                "ghooks": " git hooks",
-                "npm": "npm i -D ghooks",
-                "config": " pre-commit , npm run test"
-            }
-        ],
-        "husky (substitute)": [
-            {
-                "npm": "npm i -D husky"
-            }
-        ],
-        "istanbul": [
-            {
-                "def": "Istanbul is a code coverage tool for JavaScript.",
-                "comamnd0": "npm install -g istanbul",
-                "command1": "istanbul cover --report html nodemodules/.bin/mocha -- -R spec",
-                "command2": "istanbul cover node_modules/.bin/_mocha -- -- -u exports -R spec test/**/*",
-                "command3": "node_modules/.bin/istanbul cover node_modules/.bin/_mocha test/SmartString.test.js",
-                "command4": "node_modules/.bin/istanbul test ./node_modules/mocha/bin/_mocha -- --recursive exports -R spec test/*.test.js",
-                "issue": "https://github.com/jmcriffey/babel-istanbul/issues/70",
-                "check-coverage": "istanbul check-coverage --statements 50 --branches 50 --functions 30 --lines 50"
-            }
-        ],
-        "codecov.io": [
-            {
-                "to get a badge": "send your coverage report to 3rd part service ( codecov.io ).",
-                "command": "npm i -D codecov.io"
-            }
-        ],
-        "Badge shields.io": [
-            {
-                "shields.io": "open shields.io and go to travis-ci",
-                "image syntax": "[![Travis](https://img.shields.io/travis/rust-lang/rust.svg)]()"
-            }
-        ]
+        "ghooks ( deprecated )": [{
+            "ghooks": " git hooks",
+            "npm": "npm i -D ghooks",
+            "config": " pre-commit , npm run test"
+        }],
+        "husky (substitute)": [{
+            "npm": "npm i -D husky"
+        }],
+        "istanbul": [{
+            "def": "Istanbul is a code coverage tool for JavaScript.",
+            "comamnd0": "npm install -g istanbul",
+            "command1": "istanbul cover --report html nodemodules/.bin/mocha -- -R spec",
+            "command2": "istanbul cover node_modules/.bin/_mocha -- -- -u exports -R spec test/**/*",
+            "command3": "node_modules/.bin/istanbul cover node_modules/.bin/_mocha test/SmartString.test.js",
+            "command4": "node_modules/.bin/istanbul test ./node_modules/mocha/bin/_mocha -- --recursive exports -R spec test/*.test.js",
+            "issue": "https://github.com/jmcriffey/babel-istanbul/issues/70",
+            "check-coverage": "istanbul check-coverage --statements 50 --branches 50 --functions 30 --lines 50"
+        }],
+        "codecov.io": [{
+            "to get a badge": "send your coverage report to 3rd part service ( codecov.io ).",
+            "command": "npm i -D codecov.io"
+        }],
+
+        "Badge shields.io": [{
+            "shields.io": "open shields.io and go to travis-ci",
+            "image syntax": "[![Travis](https://img.shields.io/travis/rust-lang/rust.svg)]()"
+        }]
     },
     {
-        "ES6 Support": [
-            {
-                "babel": "npm i -D babel-cli",
-                "add script": "build: babel --out-dir dist lib --ignore *.test.js"
-            }
-        ],
-        "rimraf": [
-            {
-                "npm": "npm i -D rimraf"
-            }
-        ],
-        "packing": [
-            {
-                "npm pack run with version defined in package.json": "npm pack",
-                "files": "README and dist"
-            }
-        ],
-        "ES6 Test Support": [
-            {
-                "babel": "npm i -D babel-cli",
-                "add script": "build: babel --out-dir dist lib --ignore *.test.js",
-                "babel-register": "npm i -D babel-register",
-                "test": "_mocha test/*.test.js --compilers js:babel-register",
-                "nyc": "npm i -D nyc",
-                "check-coverage": "nyc check-coverage --statements 35 --branches 18 --functions 13 --lines 12"
-            }
-        ]
+        "ES6 Support": [{
+            "babel": "npm i -D babel-cli",
+            "add script": "build: babel --out-dir dist lib --ignore *.test.js"
+        }],
+        "rimraf": [{
+            "npm": "npm i -D rimraf"
+        }],
+        "packing": [{
+            "npm pack run with version defined in package.json": "npm pack",
+            "files": "README and dist"
+        }],
+        "ES6 Test Support": [{
+            "babel": "npm i -D babel-cli",
+            "add script": "build: babel --out-dir dist lib --ignore *.test.js",
+            "babel-register": "npm i -D babel-register",
+            "test": "_mocha test/*.test.js --compilers js:babel-register",
+            "nyc": "npm i -D nyc",
+            "check-coverage": "nyc check-coverage --statements 35 --branches 18 --functions 13 --lines 12"
+        }]
     },
     {
-        "Limit builds": [
-            {
-                "branch": "update travis to only build master",
-                "add script": "build: babel --out-dir dist lib --ignore *.test.js"
-            }
-        ],
-        "rimraf": [
-            {
-                "npm": "npm i -D rimraf"
-            }
-        ]
+        "Limit builds": [{
+            "branch": "update travis to only build master",
+            "add script": ""
+        }],
+        "rimraf": [{
+            "npm": "npm i -D rimraf"
+        }]
     },
     {
-        "UMD": [
-            {
-                "webpack": "npm i -D webpack",
-                "Json loader": "npm i -D json-loader",
-                "babel loader": "npm i -D babel-loader"
-            }
-        ],
-        "npm-run-all": [
-            {
-                "npm": "npm i -D npm-run-all"
-            }
-        ]
+        "UMD Support": [{
+            "require": "commonJS",
+            "bundler": " webpack",
+            "webpack": "npm i -D webpack",
+            "babel": "Babel is a compiler for writing next generation JavaScript.",
+            "json webpack": " json will be by default since web pack 2.0",
+            "babel loader": "npm install babel-loader babel-core babel-preset-es2015 webpack --save-dev",
+            ".babelrc": ".babelrc with below config",
+            "presets": ["es2015"],
+            "json loader": "npm i -D json-loader",
+            "Note for NPM 3": "since npm@3, so required peer dependencies like babel-core and webpack must be listed explicitly in your package.json.",
+            "build": "npm-run-all --parallel build:*"
+        }]
     }
+
+
 ]

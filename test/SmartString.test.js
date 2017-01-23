@@ -73,9 +73,12 @@
         });
         describe('- valueOf()', function() {
             it('should return the primitive value of the string, wraps native valueOf()', function() {
-                T(SS('hi').valueOf() === 'hi')
+                T(SS('hi').valueOf() === 'hi');
+                expect(SS('shouldbeaequialstring').valueOf()).to.eql('shouldbeaequialstring');
+
             });
         });
+
 
         describe('- toString()', function() {
             it('should return the native string', function() {
@@ -93,7 +96,7 @@
             });
         });
 
-        describe('- Mocha/Chai testing', () => {
+        describe('- Mocha/Chai simple test', () => {
             it('should be a dumb testing ', () => {
                 expect(true).to.be.true;
                 expect(true).to.been.true;

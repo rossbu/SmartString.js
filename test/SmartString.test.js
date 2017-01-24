@@ -46,6 +46,13 @@
 
     describe('SmartString.js', function() {
 
+        describe('- Mocha/Chai simple test', () => {
+            it('should be a dumb testing ', () => {
+                expect(true).to.be.true;
+                expect(true).to.been.true;
+            });
+        });
+
         describe('- between(left, right)', function() {
             it('should extract string between `left` and `right`', function() {
                 EQ(SS('<a>foo</a>').between('<a>', '</a>').s, 'foo')
@@ -96,12 +103,39 @@
             });
         });
 
-        describe('- Mocha/Chai simple test', () => {
-            it('should be a dumb testing ', () => {
-                expect(true).to.be.true;
-                expect(true).to.been.true;
+
+        describe('- safer toUpperCase ', () => {
+            it('should return upperCased string', function() {
+                EQ("ABC", SS('abc').s.toUpperCase());
             });
         });
+
+
+        describe('- titleCase()', function() {
+            it('should upperCase all words in a camel cased string', function() {
+                EQ(SS('dataRate').titleCase().s, 'DataRate')
+                EQ(SS('CarSpeed').titleCase().s, 'CarSpeed')
+                EQ(SS('yesWeCan').titleCase().s, 'YesWeCan')
+                EQ(SS('backgroundColor').titleCase().s, 'BackgroundColor')
+            })
+            it('should upperCase all words in a string with spaces, underscores, or dashes', function() {
+                EQ(SS('Like ice in the sunshine').titleCase().s, 'Like Ice In The Sunshine')
+                EQ(SS('data_rate').titleCase().s, 'Data_Rate')
+                EQ(SS('background-color').titleCase().s, 'Background-Color')
+                EQ(SS('-moz-something').titleCase().s, '-Moz-Something')
+                EQ(SS('_car_speed_').titleCase().s, '_Car_Speed_')
+                EQ(SS('yes_we_can').titleCase().s, 'Yes_We_Can')
+            })
+            it('can be combined with humanize to create nice titles out of ugly developer strings', function() {
+                EQ(SS('   capitalize dash-CamelCase_underscore trim  ').humanize().titleCase().s, 'Capitalize Dash Camel Case Underscore Trim')
+            })
+            it('does not fail on edge cases', function() {
+                EQ(SS('').titleCase().s, '')
+                EQ(SS(null).titleCase().s, null)
+                EQ(SS(undefined).titleCase().s, undefined)
+            })
+        })
+
 
     });
 }).call(this);
